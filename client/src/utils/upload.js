@@ -1,5 +1,5 @@
 import axios from "axios";
-impo
+
 const upload = async (file) => {
   const data = new FormData();
   data.append("file", file);

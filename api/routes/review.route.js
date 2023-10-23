@@ -1,5 +1,15 @@
-import express from "express"
+import express from "express";
+import { verifyToken } from "../middlewares/verifyToken.js";
+import {
+  createReview,
+  getReviews,
+  deleteReview,
+} from "../controllers/review.controller.js";
 
-const router=express.Router()
+const router = express.Router();
 
-export default router
+router.post("/", verifyToken, createReview )
+router.get("/:gigId", getReviews )
+router.delete("/:id", deleteReview)
+
+export default router;
