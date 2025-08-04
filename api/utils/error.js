@@ -1,4 +1,5 @@
 //Error middleware
+
 const createError=(status,message)=>{
     const err=new Error()
     err.status=status
@@ -6,3 +7,4 @@ const createError=(status,message)=>{
     return err
 }
 export default createError
+//end
